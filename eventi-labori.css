@@ -1,0 +1,45 @@
+.courses{
+   margin-top: 4rem;
+}
+
+.courses__container{
+   display: grid;
+   grid-template-columns: repeat(1,1fr);
+   gap: 2rem;
+}
+
+.course{
+   /* background: white; */
+   text-align: justify;
+   border: none;
+   /* border-bottom: 1px solid black; */
+   /* transition: var(--transition); */
+}
+
+.course:hover{
+   border-bottom: none;
+   transition: none;
+   background: none;
+   border-color: none;
+   color: black;
+   
+}
+
+.course__info{
+   padding: 2rem;
+   border-bottom: 1px solid lightgray;
+   margin-bottom: 4rem;
+   
+}
+
+.course__info:hover h4{
+   margin-left: 1rem;
+   transition: 400ms ease-in-out;
+   color: green;
+}
+
+.course__info p{
+   margin: 1.2rem 0 2rem;
+   font-size: 1.1rem;
+   text-align: justify;
+}

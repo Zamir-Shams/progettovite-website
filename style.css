@@ -1,0 +1,879 @@
+*{
+   margin: 0;
+   padding: 0;
+   border: 0;
+   outline: 0;
+   text-decoration: none;
+   list-style: none;
+   box-sizing: border-box;
+}
+
+
+/* ordered colors */
+ccccc{
+   color: #4682B4;
+   color: #FFFFFF;
+   color: #ABCDEF;
+   color: #f5f5dc;
+}
+
+
+:root{
+   --color-primary: #506f88;
+   --color-success: #00bf8e;
+   --color-warning: #f7c94b;
+   --color-danger: #5b7384;
+   --color-danger-variant: rgba(247,88,66,0.4);
+   --color-white: #fff;
+   --color-light: rgba(255,255,255,0.7);
+   --color-black: #000;
+   --color-bg1: #4682B4;
+   --color-bg2: #ABCDEF;
+
+   --container-width-lg: 88%;
+   --container-width-md: 90%;
+   --container-width-sm: 94%;
+
+   --transition: all 400ms ease;
+}
+
+body{
+   font-family: "Montserrat", sans-serif;
+   line-height: 1.7;
+   color: var(--color-white);
+   background-color: var(--color-bg);
+}
+
+.container{
+   width: var(--container-width-lg);
+   margin: 0 auto;
+}
+
+section{
+   padding: 6rem 0;
+}
+
+section h2{
+   text-align: center;
+   margin-bottom: 4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5{
+   line-height: 1.2;
+}
+
+h1{
+   font-size: 2.4rem;
+}
+h2{
+   font-size: 2rem;
+}
+h3{
+   font-size: 1.6rem;
+}
+h4{
+   font-size: 1.3rem;
+}
+
+a{
+   color: var(--color-white);
+}
+
+img{
+   width: 100%;
+   display: block;
+   object-fit: cover;
+}
+
+.btn{
+   display: inline-block;
+   background: var(--color-bg1);
+   color: var(--color-white);
+   padding: 1rem 2rem;
+   border: 1px solid transparent;
+   font-weight: 500;
+   transition: var(--transition);
+}
+
+.btn:hover{
+   background: transparent;
+   color: var(--color-white);
+   border-color: var(--color-white);
+}
+
+.btn-primary{
+   background: var(--color-bg2);
+   color: var(--color-white);
+}
+/* STARTING OF AFTER DEPLOYMENT MANIPULATION */
+.logo{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-left: -3rem;
+   /* color: greenyellow; */
+   /* font-size: 11rem; */
+}
+
+header{
+   background-image: url(/images/background\ pic.jpeg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   object-fit: cover;
+   background-position: center;
+   background-attachment: scroll;
+   color: white;
+   /* width: 100vw; */
+   /* height: 10vh; */
+   /* background: rgba(2, 2, 2, 0.4); */
+}
+
+.logo img{
+   width: 5rem;
+   height: 5rem;
+   display: block;
+   object-fit: cover;
+   border-radius: 50%;
+   cursor: not-allowed;
+}
+
+.logo h1{
+   padding: 0 0 0 .5rem;
+   font-size: 2rem;
+}
+
+/* COOKIES SETTING */
+.cookie-container{
+   color: white;
+   position: fixed;
+   bottom: -100%;
+   /* bottom: 0; */
+   left: 0;
+   right: 0;
+   background: #2f3640;
+   /* opacity: .7; */
+   padding: 0 32px;
+   font-family: montserrat;
+   transition: 400ms;
+   padding: 1rem;
+   /* margin: 0 1px; */
+}
+
+.cookie-container.active{
+   bottom: 0;
+}
+
+.cookie-container a{
+   /* color: black; */
+   text-decoration: underline;
+}
+
+.cookie-container .cookie-btn{
+   background-color: red;
+   border: 0;
+   color: white;
+   padding: 8px;
+   font-size: 15px;
+   margin: 16px 0 0 0;
+   border-radius: 4px;
+   cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ENDING OF AFTER DEPLOYMENT MANIPULATION */
+
+
+ul li {
+   display: inline-block;
+   position: relative;
+   line-height: 21px;
+   text-align: left;
+}
+ul li a {
+   display: block;
+   padding: 8px 25px;
+   text-decoration: none;
+}
+ul li a:hover {
+   background: var(--color-bg1);
+}
+
+ul li ul.dropdown-list {
+   min-width: 100%; /* Set width of the dropdown */
+   background: var(--color-bg1);
+   display: none;
+   position: absolute;
+   z-index: 999;
+   left: 0;
+}
+
+ul li:hover ul.dropdown-list {
+   display: block; /* Display the dropdown */
+}
+
+ul li ul.dropdown-list li {
+   display: block;
+}
+
+.dropdown-list li{
+   width: 220px;
+}
+/* END OF AFTER DEPLOYMENT MANIPULATION */
+
+/* ====================== NAVBAR ================ */
+nav{
+   background: transparent;
+   color: #000;
+   width: 100vw;
+   height: 5rem;
+   position: fixed;
+   top: 0;
+   z-index: 11;
+}
+
+/* CHANGE NAVBAR STYLES ON SCROLL USING JAVASCRIPT */
+.window-scroll{
+   background: #4682B4;
+   box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+   color: white;
+}
+
+.window-scroll .nav__menu a{
+   color: white;
+}
+
+.nav__container{
+   height: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   /* background-color: #ABCDEF; */
+}
+
+nav button{
+   display: none;
+}
+
+.nav__menu{
+   display: flex;
+   align-items: center;
+   gap: 0rem;
+   /* text-transform: capitalize; */
+}
+
+.nav__menu a{
+   font-size: .9rem;
+   color: black;
+   /* width: fit-content; */
+   transition: var(--transition);
+}
+
+.nav__menu a:hover{
+   background: #ABCDEF;
+}
+
+/* ====================== HEADER ================ */
+header{
+   position: relative;
+   top: 5rem;
+   overflow: hidden;
+   height: 90vh;
+   margin-bottom: 5rem;
+}
+
+.header__container{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   align-items: center;
+   gap: 5rem;
+   height: 100%;
+}
+
+.header__left p{
+   margin: 1rem 0 2.4rem;
+}
+
+/* ====================== CATEGORIES ================ */
+.categories{
+   /* background: var(--color-bg2); */
+   color: #000;
+   height: 45rem;
+   border-bottom: 1px solid var(--color-bg2);
+   /* box-shadow: 1px 1px 3px var(--color-bg1); */
+}
+
+
+.categories h1{
+   line-height: 1;
+   margin-bottom: 1rem;
+}
+
+.categories__container{
+   display: grid;
+   grid-template-columns: 40% 60%;
+   gap: 1rem;
+   
+}
+
+.categories__left{
+   margin-right:4rem;
+}
+
+.categories__left p{
+   margin: 1rem 0 3rem;
+}
+
+.categories__right{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   gap: 1.2rem;
+}
+
+.category{
+   /* border: 1px solid #4682B4; */
+   background: var(--color-bg2);
+   color: black;
+   padding: 2rem;
+   height: 12rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   row-gap: 1rem;
+   /* opacity: .5; */
+   /* border-bottom-left-radius: 1rem; */
+   /* border-top-right-radius: 1rem; */
+   transition: 200ms ease;
+}
+
+.category:hover{
+   /* box-shadow: 3px 3px 3px #4682B4; */
+   color: white;
+   opacity: 1;
+   background-color: var(--color-bg1);
+   z-index: 1;
+}
+
+.category:nth-child(1) .category__icon{
+   background-color: rgb(224, 165, 26);
+}
+.category:nth-child(2) .category__icon{
+   background-color: red;
+}
+.category:nth-child(3) .category__icon{
+   background-color: blueviolet;
+}
+.category:nth-child(5) .category__icon{
+   background: var(--color-success);
+}
+
+.category__icon{
+   background: var(--color-primary);
+   padding: 0.7rem;
+   border-radius: 0.9rem;
+}
+
+.category h5{
+   margin: 2rem 0 1rem;
+}
+
+.category p{
+   font-size: 0.85rem;
+}
+
+/* ==============POPULAR COURSES============= */
+
+.courses{
+   margin-top: 4rem;
+   /* box-shadow: 1px 1px 33px #4682B4; */
+   /* background-color: red; */
+   
+}
+
+.courses__container{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   gap: 2rem;
+}
+
+.course{
+   /* border-color: var(--color-bg1); */
+   color: #000;
+   text-align: center;
+   border: 1px solid var(--color-bg1);
+   transition: var(--transition);
+   
+   /* border-radius: 1rem; */
+   /* border-top-right-radius: 6rem; */
+   
+}
+
+.course:hover{
+   /* background: transparent; */
+   /* border-color: var(--color-primary); */
+   /* color: black; */
+   box-shadow: 1px 1px 32px var(--color-bg1);
+   background: var(--color-bg1);
+   color: white;
+}
+
+.course__info{
+   padding: 2rem;
+   
+}
+
+.course__info p{
+   margin: 1.2rem 0 2rem;
+   font-size: 0.9rem;
+   text-align: justify;
+}
+
+/* ==============FAQs============= */
+
+.faqs{
+   border-color: var(--color-bg1);
+   box-shadow: inset 0 0 1rem var(--color-bg1);
+}
+
+.faqs h2{
+   color: #000;
+}
+
+.faqs__container{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 1rem;
+}
+
+.faq{
+   padding: 2rem;
+   display: flex;
+   align-items: center;
+   gap: 1.4rem;
+   height: fit-content;
+   /* height: 11rem; */
+   background: var(--color-bg1);
+   cursor: pointer;
+   border-top-right-radius: 3rem;
+   border-bottom-right-radius: 3rem;
+   border-bottom-left-radius: 3rem;
+}
+
+.faq h4{
+   font-size: 1rem;
+   line-height: 2.2;
+}
+
+.faq__icon{
+   align-self: flex-start;
+   font-size: 1.2rem;
+}
+
+.faq p{
+   margin-top: 0.8rem;
+   display: none;
+}
+
+.faq.open p{
+   display: block;
+}
+
+/* ===============TESTIMONIALS================ */
+
+.testimonials__container{
+   overflow-x: hidden;
+   position: relative;
+   margin-top: 5rem;
+}
+
+.testimonials__container h2{
+   color: black;
+}
+
+.testimonial{
+   padding-top: 2rem;
+}
+
+.testimonial__info small,h5{
+   color: black;
+   /* margin: 0 0 1rem 0; */
+}
+
+
+/* .avatar img{
+   width: 7rem;
+   height: 7rem;
+   border-radius: 50%;
+   overflow: hidden;
+   
+   margin: 0 auto 1rem;
+ 
+   border: .4rem solid var(--color-bg1);
+} */
+
+.testimonial__info{
+   text-align: center;
+}
+
+.testimonial__body{
+   /* border: 2px solid var(--color-bg1); */
+   padding: 2rem;
+   /* margin-top: -1rem; */
+   /* margin-left: -1rem; */
+   position: relative;
+   border-radius: .5rem;
+   color: #000;
+   margin-top: 2rem;
+}
+
+.testimonial__body p{
+   margin-left: 2rem;
+}
+
+/* .testimonial__body::before{
+   content: "";
+   display: block;
+   background: linear-gradient(
+      135deg,
+      transparent,
+      var(--color-bg1),
+      var(--color-bg1),
+      var(--color-bg1));
+   width: 3rem;
+   height: 3rem;
+   position: absolute;
+   left: 46%;
+   top: -1.5rem;
+   transform: rotate(45deg);
+}  */
+
+/* ===============TESTIMONIALS================ */
+
+
+footer{
+   background: #4682B4;
+   padding-top: 5rem;
+   font-size: 0.9rem;
+}
+
+.footer__container{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 5rem;
+}
+
+
+.footer__container .logo-img{
+   width: 7rem;
+   height: 7rem;
+   
+}
+.footer__container div img{
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+   cursor:not-allowed
+}
+
+.footer__container > div h4{
+   margin-bottom: 1.2rem;
+}
+
+.footer__1 p{
+   margin: 0 0 2rem;
+}
+
+footer .Permalinks{
+   display: flex;
+   flex-direction: column;
+
+}
+
+footer ul a{
+   margin-bottom: 0.7rem;
+   /* width: 3rem;
+   height: 3rem; */
+   /* display: flex; */
+   /* justify-content: center; */
+   /* align-items: center; */
+}
+
+footer ul a:hover{
+   text-decoration: underline;
+}
+
+.footer__socials{
+   display: flex;
+   gap: 1rem;
+   font-size: 1.2rem;
+   margin-top: 2rem;
+   margin-left: -1rem;
+}
+
+.footer__socials a:hover{
+   background-color: #075fb8;
+   border-radius: 50%;
+}
+
+.footer__copyright{
+   text-align: center;
+   margin-top: 4rem;
+   padding: 1.2rem 0;
+   border-top: 1px solid var(--color-bg2);
+}
+
+/* ===========================MEDIA QUERIES (TABLET) ===========================*/
+
+@media screen and (max-width:1024px){
+   .container{
+      width: var(--container-width-md);
+   }
+
+   h1{
+      font-size: 2.2rem;
+   }
+
+   h2{
+      font-size: 1.7rem;
+   }
+
+   h3{
+      font-size: 1.4rem;
+   }
+
+   h4{
+      font-size: 1.2rem;
+   }
+
+   /* ==============NAVBAR============= */
+
+   nav button{
+      display: inline-block;
+      background: transparent;
+      font-size: 1.8rem;
+      color: black;
+      cursor: pointer;
+   }
+
+   .nav__container .logo{
+      margin-left: .3rem;
+   }
+
+   nav button#close-menu-btn{
+      display: none;
+   }
+
+   .nav__menu {
+      position: fixed;
+      top: 5rem;
+      right: 5%;
+      height: fit-content;
+      width: 18rem;
+      flex-direction: column;
+      gap: 0;
+      display: none;
+   }
+
+   .nav__menu li{
+      width: 100%;
+      height: 5.8rem;
+   }
+
+   .nav__menu li a{
+      background: var(--color-primary);
+      box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      
+   }
+
+   .nav__menu li a:hover{
+      background: var(--color-bg2);
+      color: var(--color-white);
+   }
+
+   .header__right img{
+      display: none;
+   }
+
+   /* ====================HEADER=============== */
+
+   header{
+      height: 52rem;
+      margin-bottom: 4rem;
+   }
+
+   .header__container{
+      gap: 0;
+      padding-bottom: 3rem;
+   }
+
+   /* ====================CATEGORIES=============== */
+
+   .categories{
+      height: auto;
+   }
+
+   .categories__container{
+      grid-template-columns: 1fr;
+      gap: 3rem;
+   }
+
+   .categories__left{
+      margin-right: 0;
+   }
+
+   /* ====================POPULAR COURSES=============== */
+
+   .courses{
+      margin-top: 0;
+   }
+
+   .courses__container{
+      grid-template-columns: 1fr 1fr;
+   }
+
+   /* ====================FAQs=============== */
+
+   .faqs__container{
+      grid-template-columns: 1fr;
+   }
+
+   .faq{
+      padding: 1.5rem;
+   }
+
+   /* ====================FOOTER=============== */
+
+   .footer__container{
+      grid-template-columns: 1fr 1fr;
+   }
+
+   .footer__1{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+
+   footer .Permalinks{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+}
+
+/* ====================MEDIA QUERIES (MOBILE)=============== */
+
+@media screen and (max-width:600px){
+   .container{
+      width: var(--container-width-sm);
+   }
+
+   /* ====================NAVBAR=============== */
+   .nav__menu{
+      right: 3%;
+   }
+   .nav__container h1{
+      font-size: 1.3rem;
+      margin-left: 1.3rem;
+   }
+
+   .nav__container .logo{
+      margin-left: -9px
+   }
+
+   .nav__container{
+      display: flex;
+      justify-content: center;
+      align-items: space-between;
+      column-gap: 2rem;
+   }
+
+   /* ====================HEADER=============== */
+
+   header{
+      height: 100vh;
+   }
+
+   .header__container{
+      grid-template-columns: 1fr;
+      text-align: center;
+      margin-top: 0;
+   }
+
+   .header__left p{
+      margin-top: 1.3rem;
+   }
+
+   /* ====================CATEGORIES=============== */
+
+   .categories__right{
+      grid-template-columns: 1fr 1fr;
+      gap: 0.7rem;
+   }
+
+   .category{
+      padding: 1rem;
+      border-radius: 1rem;
+   }
+
+   .category__icon{
+      margin-top: 4px;
+      display: -moz-inline-stack;
+   }
+
+   /* ====================POPULAR COURSES=============== */
+
+   .courses__container{
+      grid-template-columns: 1fr;
+   }
+
+   
+
+   /* ====================TESTIMONIAL=============== */
+
+   .testimonial__body{
+      padding: 1.2rem;
+   }
+
+   /* ====================FOOTER=============== */
+
+   .footer__container{
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 2rem;
+   }
+
+   .footer__1 p{
+      margin: 1rem auto;
+   }
+
+   .footer__socials{
+      justify-content: center;
+      
+   }
+}
